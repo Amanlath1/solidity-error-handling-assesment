@@ -14,9 +14,9 @@ The performDivison function performs a division but requires that the _denominat
 
 It's essential to use these error handling statements judiciously to maintain the security and correctness of your smart contract. Remember that require() and revert() consume all gas when they fail, while assert() should only be used to check for internal errors and should not fail under normal conditions.
 
-##Getting Started
+## Getting Started
 
-###Executing Program
+### Executing Program
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
@@ -28,7 +28,7 @@ Once the code is compiled, you can deploy the contract by clicking on the "Deplo
 
 Once the contract is deployed, you can interact with it by calling the setValue function to set the value, performDivison function to perform the division and value variable check to check the value of the variable that is publick so we can check that. Finally, click on the "transact" button to execute the function and retrieve the values and messages.
 
-##Author
+## Author
 
 Aman Lath
 [@Amanlath6](https://twitter.com/amanlath6)
