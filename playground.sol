@@ -2,23 +2,18 @@
 pragma solidity ^0.8.1;
 
 contract ErrorHandlingContract {
-    uint public value;
 
-    function setValue(uint _value) public {
-        require(_value > 0, "Value must be greater than 0.");
+    uint gravity = 10;
 
-        assert(_value != value);
+    function handler(uint _mass, uint _gravity) public view returns (uint) {
+        require(_mass > 0,"Mass of the object Cannot be 0.");
 
-        value = _value;
-    }
+        assert(_gravity == gravity);
 
-    function performDivison(uint _numerator, uint _denominator) public pure returns (uint) {
-        require(_denominator != 0, "Cannot divide by zero.");
-
-        if (_numerator % _denominator != 0) {
-            revert("Numerator must be divisible by denominator.");
+        if ((_mass * _gravity) < 0){
+            revert("Weight of the object cannot be zero");
         }
 
-        return _numerator / _denominator;
+        return _mass * _gravity;
     }
 }
