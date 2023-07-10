@@ -4,16 +4,23 @@ pragma solidity ^0.8.1;
 contract ErrorHandlingContract {
 
     uint gravity = 10;
+    address owner;
 
-    function handler(uint _mass, uint _gravity) public view returns (uint) {
-        require(_mass > 0,"Mass of the object Cannot be 0.");
+    constructor() {
+        
+        owner = msg.sender;
+    }
 
-        assert(_gravity == gravity);
+    function Weight(uint _mass) public view returns (uint) {
+        require(owner == msg.sender ,"You are not the owner");
 
-        if ((_mass * _gravity) < 0){
+        assert(_mass > 0);
+
+        if ((_mass * gravity) < 0){
+
             revert("Weight of the object cannot be zero");
         }
 
-        return _mass * _gravity;
+        return _mass * gravity;
     }
 }
