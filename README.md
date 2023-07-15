@@ -6,11 +6,7 @@ This repository is for the project assessment of the project of the 1st module o
 write a smart contract that implements the require(), assert() and revert() statements.
 
 ## Description
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that sets the value of the varble by checking some constrains as given in program an to divide the two values taken from the user by checking that the number is divisible and the value od denominator is not equal to 0. This program uses the concept of Functions and Error handling.
-
-The setValue function sets a new value but requires that the input _newValue must be greater than zero. It uses require() for input validation and assert() to ensure that the new value is different from the existing value.
-
-The performDivison function performs a division but requires that the _denominator must be non-zero. If the _numerator is not divisible by the _denominator, the function will revert with a specific error message using the revert() statement.
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that sets the value of the variable by checking some constrains as given in program to calculate the weight of the object by taking in the mass of the object. As we all know the formulae of i.e. Weight = mass * gravity. This program uses the concept of Functions and Error handling.
 
 It's essential to use these error handling statements judiciously to maintain the security and correctness of your smart contract. Remember that require() and revert() consume all gas when they fail, while assert() should only be used to check for internal errors and should not fail under normal conditions.
 
